@@ -7,7 +7,7 @@
 <meta name="description" content="مؤسسه زبان‌های جهانی و شهروندی جهانی مهاجران (تأسیس ۲۰۲۰): مرکز آمادگی آزمون‌های بین‌المللی TOEFL، IELTS، Duolingo English Test، GRE، GMAT و PTE.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Vazirmatn:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Sora:wght@500;600&family=Vazirmatn:wght@400;500&display=swap" rel="stylesheet">
 <script type="importmap">{ "imports": { "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.1.18/+esm" } }</script>
 <style>
 :root{
@@ -15,6 +15,7 @@
   --accent-teal:#0b6e97;--surface:#f4f4f4;--surface-card:#fff;--ink:#0a0a0a;--ink-soft:#717784;
   --ghost:#d7dae1;--hairline:#e6e8ec;--on-brand:#fff;
   --radius-card:1.5rem;--radius-card-lg:2rem;--radius-pill:62.5rem;
+  --font-brand:"Sora","Onest",sans-serif; /* font of the English "Mohajeran" wordmark */
   --expo:cubic-bezier(.16,1,.3,1);--cubic:cubic-bezier(.65,0,.35,1);
 }
 html{font-size:16px}
@@ -35,7 +36,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 main{width:100%;overflow-x:clip;padding:.5rem}
 @media(min-width:640px){main{padding:.75rem}}
 .fw5{font-weight:500}
-.lat{letter-spacing:.2em;text-transform:uppercase}
+.lat{letter-spacing:.2em;text-transform:uppercase;font-family:var(--font-brand)}
 
 /* photo crops from the two supplied images */
 .crop{position:relative;overflow:hidden;container-type:size;background:var(--brand-deep)}
@@ -81,9 +82,20 @@ header.top{display:flex;align-items:center;padding:1.5rem 1.5rem 0;font-size:.75
 .plate .in{position:absolute;left:0;right:0;top:-16%;height:132%;width:100%}
 .plate .in .crop{position:absolute;inset:0;opacity:.55}
 .plate::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,47,99,.65),rgba(15,47,99,.35),rgba(15,47,99,.75))}
-.hero .hero-emblem{position:absolute;z-index:-5;width:min(28rem,46vh);height:min(28rem,46vh);right:7%;top:26%;opacity:.95;box-shadow:0 0 6rem rgba(87,144,230,.45)}
-@media(max-width:768px){.hero-emblem{display:none}}
-h1.big{padding:1rem 1.5rem 0;font-size:12.5vw;font-weight:500;text-transform:uppercase;line-height:.85;letter-spacing:-.02em;white-space:nowrap;direction:ltr;text-align:left;font-family:"Onest",sans-serif}
+/* logo: top-right, beside the MOHAJERAN title (never on top of the letters) */
+.hero .hero-emblem{--d:calc(18vw - 5.5rem);position:absolute;z-index:3;pointer-events:none;width:var(--d);height:var(--d);
+  right:2.5rem;top:calc(7.5rem + 5vw - var(--d) / 2);
+  box-shadow:0 1.5rem 4rem rgba(5,20,50,.55),0 0 5rem rgba(87,144,230,.45)}
+/* big outlined "2020" under the title */
+.since{position:absolute;z-index:1;pointer-events:none;left:2.5rem;top:calc(5.5rem + 10vw + 3rem);direction:ltr;
+  font-family:var(--font-brand);font-weight:600;font-size:15vw;line-height:.85;letter-spacing:-.02em;
+  color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.85)}
+.since small{display:block;font-size:.8rem;letter-spacing:.35em;color:rgba(255,255,255,.8);-webkit-text-stroke:0;font-weight:500;margin-bottom:.9rem;padding-inline-start:.4rem}
+@media(max-width:768px){
+  .hero .hero-emblem{--d:36vw;right:1.5rem;top:calc(5.5rem + 10vw + 1.5rem)}
+  .since{left:1.5rem;top:calc(5.5rem + 10vw + 1.5rem);font-size:23vw}
+}
+h1.big{position:relative;z-index:1;padding:1rem 1.5rem 0;font-size:11.8vw;font-weight:600;text-transform:uppercase;line-height:.85;letter-spacing:-.02em;white-space:nowrap;direction:ltr;text-align:left;font-family:var(--font-brand)}
 @media(min-width:640px){h1.big{padding:1rem 2.5rem 0}}
 .hero-bottom{margin-top:auto;padding:0 1.5rem 2rem;display:flex;flex-direction:column;gap:1.5rem}
 @media(min-width:640px){.hero-bottom{padding:0 2.5rem 2.5rem;flex-direction:row;justify-content:space-between;align-items:flex-end}}
@@ -293,6 +305,7 @@ input:focus,textarea:focus{outline:0;border-color:var(--brand-light);box-shadow:
     </div>
   </header>
 
+  <div class="since" data-words="2020" data-gate data-b="450" data-stagger="120" data-dur="1100" aria-label="تأسیس ۲۰۲۰"></div>
   <h1 class="big" id="hero-title" data-words="Mohajeran" data-gate data-stagger="140" data-dur="1100" aria-label="Mohajeran"></h1>
 
   <div class="hero-bottom">
