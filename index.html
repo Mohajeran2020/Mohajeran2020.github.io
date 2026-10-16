@@ -1,3082 +1,647 @@
-```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>mohajeran 2020 | آزمون های زبان</title>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مؤسسه مهاجران | آمادگی آزمون‌های TOEFL، IELTS، Duolingo، GRE، GMAT و PTE</title>
+<meta name="description" content="مؤسسه زبان‌های جهانی و شهروندی جهانی مهاجران (تأسیس ۲۰۲۰): مرکز آمادگی آزمون‌های بین‌المللی TOEFL، IELTS، Duolingo English Test، GRE، GMAT و PTE.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
-rel="stylesheet"
->
-
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Vazirmatn:wght@400;500&display=swap" rel="stylesheet">
+<script type="importmap">{ "imports": { "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.1.18/+esm" } }</script>
 <style>
-
-/* =========================
-   VARIABLES
-========================= */
-
 :root{
-
-    --navy:#081c35;
-    --navy2:#102d4d;
-
-    --cream:#f8f0e2;
-    --cream2:#fffaf2;
-
-    --brown:#684a32;
-    --brown2:#8b6848;
-
-    --gold:#c99b4d;
-    --gold2:#e1bd76;
-
-    --text:#293442;
-    --muted:#766d62;
-
-    --border:#dfcfb8;
-
-    --white:#ffffff;
-
-    --shadow:
-    0 15px 45px rgba(65,43,24,.08);
-
-}
-
-
-/* =========================
-   RESET
-========================= */
-
-*{
-
-    margin:0;
-    padding:0;
-
-    box-sizing:border-box;
-
-}
-
-
-html{
-
-    scroll-behavior:smooth;
-
-}
-
-
-body{
-
-    font-family:
-    "Vazirmatn",
-    Tahoma,
-    sans-serif;
-
-    background:
-    var(--cream2);
-
-    color:
-    var(--text);
-
-    line-height:
-    2;
-
-}
-
-
-a{
-
-    text-decoration:none;
-
-    color:inherit;
-
-}
-
-
-.container{
-
-    width:
-    min(1160px,92%);
-
-    margin:
-    auto;
-
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-
-    position:
-    sticky;
-
-    top:0;
-
-    z-index:1000;
-
-    background:
-    rgba(8,28,53,.97);
-
-    backdrop-filter:
-    blur(15px);
-
-    border-bottom:
-    1px solid
-    rgba(255,255,255,.08);
-
-}
-
-
-.nav{
-
-    min-height:
-    78px;
-
-    display:
-    flex;
-
-    align-items:
-    center;
-
-    justify-content:
-    space-between;
-
-    gap:
-    25px;
-
-}
-
-
-/* LOGO */
-
-.logo{
-
-    display:
-    flex;
-
-    align-items:
-    center;
-
-    gap:
-    12px;
-
-    color:
-    white;
-
-}
-
-
-.logo-icon{
-
-    width:
-    44px;
-
-    height:
-    44px;
-
-    border:
-    1px solid
-    var(--gold2);
-
-    border-radius:
-    13px;
-
-    position:
-    relative;
-
-    display:
-    grid;
-
-    place-items:
-    center;
-
-}
-
-
-.logo-icon::before{
-
-    content:"";
-
-    width:
-    18px;
-
-    height:
-    18px;
-
-    border:
-    2px solid
-    var(--gold2);
-
-    transform:
-    rotate(45deg);
-
-    border-radius:
-    4px;
-
-}
-
-
-.logo-text strong{
-
-    display:block;
-
-    font-size:
-    16px;
-
-}
-
-
-.logo-text span{
-
-    display:block;
-
-    color:
-    #aebdcd;
-
-    font-size:
-    9px;
-
-}
-
-
-/* NAVIGATION */
-
-.nav-links{
-
-    display:
-    flex;
-
-    gap:
-    25px;
-
-    color:
-    #d9e1e9;
-
-    font-size:
-    12px;
-
-}
-
-
-.nav-links a{
-
-    transition:
-    .2s;
-
-}
-
-
-.nav-links a:hover{
-
-    color:
-    var(--gold2);
-
-}
-
-
-.nav-button{
-
-    background:
-    var(--gold2);
-
-    color:
-    var(--navy);
-
-    padding:
-    9px 17px;
-
-    border-radius:
-    10px;
-
-    font-size:
-    11px;
-
-    font-weight:
-    800;
-
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-
-    min-height:
-    690px;
-
-    position:
-    relative;
-
-    overflow:
-    hidden;
-
-    display:
-    flex;
-
-    align-items:
-    center;
-
-    background:
-
-    linear-gradient(
-        180deg,
-        #faf2e5 0%,
-        #f3e6d3 100%
-    );
-
-}
-
-
-.hero::before{
-
-    content:"";
-
-    position:
-    absolute;
-
-    inset:0;
-
-    background-image:
-
-    radial-gradient(
-        rgba(201,155,77,.18)
-        1px,
-        transparent 1px
-    );
-
-    background-size:
-    20px 20px;
-
-}
-
-
-.hero-content{
-
-    position:
-    relative;
-
-    z-index:
-    5;
-
-    width:
-    min(850px,92%);
-
-    margin:
-    auto;
-
-    text-align:
-    center;
-
-    padding-bottom:
-    190px;
-
-}
-
-
-.eyebrow{
-
-    color:
-    var(--gold);
-
-    font-size:
-    12px;
-
-    font-weight:
-    800;
-
-}
-
-
-.hero h1{
-
-    color:
-    var(--navy);
-
-    font-size:
-    clamp(38px,6vw,68px);
-
-    line-height:
-    1.25;
-
-    margin:
-    12px 0;
-
-}
-
-
-.hero-description{
-
-    color:
-    var(--muted);
-
-    font-size:
-    14px;
-
-    max-width:
-    650px;
-
-    margin:
-    auto;
-
-}
-
-
-.hero-buttons{
-
-    margin-top:
-    25px;
-
-    display:
-    flex;
-
-    justify-content:
-    center;
-
-    gap:
-    12px;
-
-    flex-wrap:
-    wrap;
-
-}
-
-
-.btn{
-
-    display:
-    inline-flex;
-
-    justify-content:
-    center;
-
-    align-items:
-    center;
-
-    border-radius:
-    11px;
-
-    padding:
-    11px 21px;
-
-    font-family:
-    inherit;
-
-    font-size:
-    12px;
-
-    font-weight:
-    800;
-
-    transition:
-    .2s;
-
-}
-
-
-.btn:hover{
-
-    transform:
-    translateY(-2px);
-
-}
-
-
-.btn-primary{
-
-    background:
-    var(--navy);
-
-    color:
-    white;
-
-}
-
-
-.btn-secondary{
-
-    border:
-    1px solid
-    var(--brown);
-
-    color:
-    var(--brown);
-
-    background:
-    rgba(255,255,255,.3);
-
-}
-
-
-/* =========================
-   CITY LANDMARKS
-========================= */
-
-.landmarks{
-
-    position:
-    absolute;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    height:
-    255px;
-
-    display:
-    flex;
-
-    justify-content:
-    space-around;
-
-    align-items:
-    flex-end;
-
-    padding:
-    0 3%;
-
-    z-index:
-    3;
-
-}
-
-
-.landmark{
-
-    width:
-    15%;
-
-    height:
-    225px;
-
-    position:
-    relative;
-
-    display:
-    flex;
-
-    align-items:
-    flex-end;
-
-    justify-content:
-    center;
-
-}
-
-
-.landmark svg{
-
-    width:
-    100%;
-
-    max-width:
-    145px;
-
-    height:
-    100%;
-
-}
-
-
-.landmark svg *{
-
-    fill:
-    none;
-
-    stroke:
-    var(--brown);
-
-    stroke-width:
-    2.5;
-
-    stroke-linecap:
-    round;
-
-    stroke-linejoin:
-    round;
-
-}
-
-
-.landmark-name{
-
-    position:
-    absolute;
-
-    bottom:
-    0;
-
-    font-size:
-    8px;
-
-    letter-spacing:
-    1px;
-
-    color:
-    var(--brown2);
-
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
-section{
-
-    padding:
-    85px 0;
-
-}
-
-
-.section-header{
-
-    text-align:
-    center;
-
-    max-width:
-    750px;
-
-    margin:
-    0 auto 42px;
-
-}
-
-
-.section-line{
-
-    width:
-    60px;
-
-    height:
-    3px;
-
-    border-radius:
-    5px;
-
-    background:
-    var(--gold);
-
-    margin:
-    0 auto 12px;
-
-}
-
-
-.section-header h2{
-
-    font-size:
-    31px;
-
-    color:
-    var(--navy);
-
-    margin-bottom:
-    7px;
-
-}
-
-
-.section-header p{
-
-    font-size:
-    13px;
-
-    color:
-    var(--muted);
-
-}
-
-
-/* =========================
-   EXAMS
-========================= */
-
-.exams{
-
-    background:
-    var(--cream2);
-
-}
-
-
-.exam-grid{
-
-    display:
-    grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:
-    18px;
-
-}
-
-
-.exam-card{
-
-    background:
-    white;
-
-    border:
-    1px solid
-    var(--border);
-
-    border-radius:
-    21px;
-
-    padding:
-    23px;
-
-    box-shadow:
-    var(--shadow);
-
-    transition:
-    .25s;
-
-}
-
-
-.exam-card:hover{
-
-    transform:
-    translateY(-6px);
-
-    border-color:
-    rgba(201,155,77,.6);
-
-}
-
-
-.exam-logo{
-
-    height:
-    70px;
-
-    border-radius:
-    15px;
-
-    background:
-    var(--cream);
-
-    display:
-    flex;
-
-    align-items:
-    center;
-
-    justify-content:
-    center;
-
-    color:
-    var(--navy);
-
-    font-weight:
-    800;
-
-    font-size:
-    22px;
-
-}
-
-
-.exam-card h3{
-
-    color:
-    var(--navy);
-
-    font-size:
-    18px;
-
-    margin-top:
-    15px;
-
-}
-
-
-.exam-card p{
-
-    font-size:
-    12px;
-
-    color:
-    var(--muted);
-
-    min-height:
-    62px;
-
-}
-
-
-.exam-bottom{
-
-    display:
-    flex;
-
-    align-items:
-    center;
-
-    justify-content:
-    space-between;
-
-    gap:
-    10px;
-
-}
-
-
-.language{
-
-    font-size:
-    9px;
-
-    color:
-    var(--brown);
-
-    background:
-    var(--cream);
-
-    padding:
-    4px 9px;
-
-    border-radius:
-    20px;
-
-}
-
-
-.more-button{
-
-    background:
-    var(--navy);
-
-    color:
-    white;
-
-    padding:
-    8px 13px;
-
-    border-radius:
-    9px;
-
-    font-size:
-    10px;
-
-    font-weight:
-    800;
-
-}
-
-
-/* =========================
-   PROCESS
-========================= */
-
-.process{
-
-    background:
-    #f3e6d2;
-
-}
-
-
-.process-layout{
-
-    display:
-    grid;
-
-    grid-template-columns:
-    1fr 1.25fr;
-
-    gap:
-    30px;
-
-}
-
-
-/* CANDIDATE IMAGES */
-
-.candidate-images{
-
-    display:
-    grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-    gap:
-    12px;
-
-}
-
-
-.candidate{
-
-    min-height:
-    205px;
-
-    border-radius:
-    18px;
-
-    position:
-    relative;
-
-    overflow:
-    hidden;
-
-    background:
-    #e8dccb;
-
-}
-
-
-.candidate img{
-
-    width:
-    100%;
-
-    height:
-    100%;
-
-    min-height:
-    205px;
-
-    display:
-    block;
-
-    object-fit:
-    cover;
-
-    transition:
-    transform .35s ease;
-
-}
-
-
-.candidate:hover img{
-
-    transform:
-    scale(1.04);
-
-}
-
-
-/* PROCESS BOX */
-
-.process-box{
-
-    background:
-    var(--navy);
-
-    color:
-    white;
-
-    padding:
-    32px;
-
-    border-radius:
-    25px;
-
-    box-shadow:
-    var(--shadow);
-
-}
-
-
-.process-box h2{
-
-    font-size:
-    27px;
-
-    margin-bottom:
-    8px;
-
-}
-
-
-.process-intro{
-
-    color:
-    #c5d0dc;
-
-    font-size:
-    12px;
-
-}
-
-
-.slogan{
-
-    border-right:
-    3px solid
-    var(--gold2);
-
-    padding-right:
-    14px;
-
-    margin:
-    20px 0;
-
-    color:
-    #f0f4f7;
-
-    font-size:
-    13px;
-
-}
-
-
-.features{
-
-    display:
-    grid;
-
-    gap:
-    9px;
-
-}
-
-
-.feature{
-
-    display:
-    flex;
-
-    gap:
-    10px;
-
-    padding:
-    11px 12px;
-
-    border:
-    1px solid
-    rgba(227,189,112,.15);
-
-    background:
-    rgba(255,255,255,.025);
-
-    border-radius:
-    13px;
-
-}
-
-
-.check{
-
-    color:
-    var(--gold2);
-
-    font-size:
-    18px;
-
-    line-height:
-    1.5;
-
-}
-
-
-.feature strong{
-
-    display:
-    block;
-
-    color:
-    white;
-
-    font-size:
-    12px;
-
-}
-
-
-.feature-text{
-
-    color:
-    #d5dde5;
-
-    font-size:
-    10.5px;
-
-}
-
-
-/* =========================
-   SECURITY
-========================= */
-
-.security{
-
-    background:
-    var(--navy);
-
-    color:
-    white;
-
-}
-
-
-.security .section-header h2{
-
-    color:
-    white;
-
-}
-
-
-.security .section-header p{
-
-    color:
-    #aebdcd;
-
-}
-
-
-.security-grid{
-
-    display:
-    grid;
-
-    grid-template-columns:
-    repeat(5,1fr);
-
-    gap:
-    13px;
-
-}
-
-
-.security-card{
-
-    min-height:
-    175px;
-
-    text-align:
-    center;
-
-    padding:
-    20px 13px;
-
-    border:
-    1px solid
-    rgba(227,189,112,.18);
-
-    background:
-    rgba(255,255,255,.025);
-
-    border-radius:
-    18px;
-
-}
-
-
-.security-icon{
-
-    width:
-    44px;
-
-    height:
-    44px;
-
-    display:
-    grid;
-
-    place-items:
-    center;
-
-    margin:
-    0 auto 10px;
-
-    border:
-    1px solid
-    rgba(227,189,112,.5);
-
-    border-radius:
-    50%;
-
-    color:
-    var(--gold2);
-
-    font-size:
-    18px;
-
-}
-
-
-.security-card h3{
-
-    font-size:
-    13px;
-
-    margin-bottom:
-    5px;
-
-}
-
-
-.security-card p{
-
-    font-size:
-    9px;
-
-    color:
-    #aebdcd;
-
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-
-    background:
-    var(--cream);
-
-}
-
-
-.contact-grid{
-
-    display:
-    grid;
-
-    grid-template-columns:
-    repeat(5,1fr);
-
-    border:
-    1px solid
-    var(--border);
-
-    border-radius:
-    20px;
-
-    background:
-    rgba(255,255,255,.5);
-
-    overflow:
-    hidden;
-
-}
-
-
-.contact-item{
-
-    text-align:
-    center;
-
-    padding:
-    22px 7px;
-
-    border-left:
-    1px solid
-    var(--border);
-
-}
-
-
-.contact-item:last-child{
-
-    border-left:
-    0;
-
-}
-
-
-.contact-icon{
-
-    font-size:
-    22px;
-
-    color:
-    var(--gold);
-
-}
-
-
-.contact-item h3{
-
-    color:
-    var(--navy);
-
-    font-size:
-    12px;
-
-    margin:
-    4px;
-
-}
-
-
-.contact-item p{
-
-    color:
-    var(--muted);
-
-    font-size:
-    9px;
-
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-
-    background:
-    #041326;
-
-    color:
-    white;
-
-    padding:
-    48px 0 18px;
-
-}
-
-
-.footer-grid{
-
-    display:
-    grid;
-
-    grid-template-columns:
-    1.5fr 1fr 1fr;
-
-    gap:
-    30px;
-
-}
-
-
-.footer-grid h3{
-
-    font-size:
-    13px;
-
-    margin-bottom:
-    10px;
-
-}
-
-
-.footer-grid p,
-.footer-grid a{
-
-    display:
-    block;
-
-    color:
-    #93a2b2;
-
-    font-size:
-    10px;
-
-    margin:
-    6px 0;
-
-}
-
-
-.copyright{
-
-    border-top:
-    1px solid
-    rgba(255,255,255,.08);
-
-    margin-top:
-    30px;
-
-    padding-top:
-    14px;
-
-    text-align:
-    center;
-
-    color:
-    #6d7c8e;
-
-    font-size:
-    9px;
-
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px){
-
-    .nav-links{
-
-        display:
-        none;
-
-    }
-
-
-    .exam-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-    }
-
-
-    .process-layout{
-
-        grid-template-columns:
-        1fr;
-
-    }
-
-
-    .security-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-    }
-
-
-    .contact-grid{
-
-        grid-template-columns:
-        repeat(3,1fr);
-
-    }
-
-
-    .footer-grid{
-
-        grid-template-columns:
-        1fr 1fr;
-
-    }
-
-}
-
-
-@media(max-width:560px){
-
-    .nav{
-
-        min-height:
-        70px;
-
-    }
-
-
-    .nav-button{
-
-        display:
-        none;
-
-    }
-
-
-    .hero{
-
-        min-height:
-        620px;
-
-    }
-
-
-    .hero-content{
-
-        padding-bottom:
-        130px;
-
-    }
-
-
-    .hero h1{
-
-        font-size:
-        38px;
-
-    }
-
-
-    .landmarks{
-
-        height:
-        145px;
-
-    }
-
-
-    .landmark{
-
-        width:
-        18%;
-
-        height:
-        120px;
-
-    }
-
-
-    .landmark:nth-child(even){
-
-        display:
-        none;
-
-    }
-
-
-    .exam-grid{
-
-        grid-template-columns:
-        1fr;
-
-    }
-
-
-    .security-grid{
-
-        grid-template-columns:
-        1fr 1fr;
-
-    }
-
-
-    .contact-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-    }
-
-
-    .contact-item:nth-child(2n){
-
-        border-left:
-        0;
-
-    }
-
-
-    .footer-grid{
-
-        grid-template-columns:
-        1fr;
-
-    }
-
-
-    section{
-
-        padding:
-        62px 0;
-
-    }
-
-
-    .candidate{
-
-        min-height:
-        160px;
-
-    }
-
-
-    .candidate img{
-
-        min-height:
-        160px;
-
-    }
-
-
-    .process-box{
-
-        padding:
-        24px;
-
-    }
-
-}
-
+  --background:#fff;--foreground:#0a0a0a;--brand:#2563c9;--brand-deep:#0f2f63;--brand-light:#5790e6;
+  --accent-teal:#0b6e97;--surface:#f4f4f4;--surface-card:#fff;--ink:#0a0a0a;--ink-soft:#717784;
+  --ghost:#d7dae1;--hairline:#e6e8ec;--on-brand:#fff;
+  --radius-card:1.5rem;--radius-card-lg:2rem;--radius-pill:62.5rem;
+  --expo:cubic-bezier(.16,1,.3,1);--cubic:cubic-bezier(.65,0,.35,1);
+}
+html{font-size:16px}
+@media (max-width:1920px){html{font-size:.833333vw}}
+@media (max-width:1440px){html{font-size:1.111111vw}}
+@media (max-width:1024px){html{font-size:1.5625vw}}
+@media (max-width:640px){html{font-size:4.444444vw}}
+html.locked{position:relative;overflow:hidden;height:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+*,*::before,*::after{box-sizing:border-box;margin:0}
+body{min-height:100vh;background:var(--background);color:var(--foreground);font-family:"Onest","Vazirmatn",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none;padding:0}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--brand-light);outline-offset:2px}
+main{width:100%;overflow-x:clip;padding:.5rem}
+@media(min-width:640px){main{padding:.75rem}}
+.fw5{font-weight:500}
+.lat{letter-spacing:.2em;text-transform:uppercase}
+
+/* photo crops from the two supplied images */
+.crop{position:relative;overflow:hidden;container-type:size;background:var(--brand-deep)}
+.ph{position:absolute;left:50%;top:50%;width:max(100cqw,100cqh);height:max(100cqw,100cqh);transform:translate(-50%,-50%);
+  background-image:url(assets/candidates.jpg);background-repeat:no-repeat;background-size:318.7% 216%}
+.t1{background-position:2.2% 3.8%}.t2{background-position:49.7% 3.8%}.t3{background-position:98.1% 3.8%}
+.t4{background-position:2.2% 94.2%}.t5{background-position:49.7% 94.2%}.t6{background-position:98.1% 94.2%}
+.emblem{border-radius:50%;overflow:hidden;position:relative;container-type:size;background:#cfeef2}
+.emblem i{position:absolute;inset:0;background:url(assets/logo.jpg) 49.7% 50%/201% 108.5% no-repeat}
+
+/* reveal primitives */
+.ln,.wd{display:block;overflow:hidden;padding-bottom:.14em;margin-bottom:-.14em}
+.wd{display:inline-block;vertical-align:top}
+.ln>span,.wd>span{display:block;transform:translateY(115%);opacity:0;
+  transition:transform var(--d,950ms) var(--ez,var(--expo)) calc(var(--i,0)*var(--s,120ms) + var(--b,0ms)),opacity var(--d,950ms) var(--ez,var(--expo)) calc(var(--i,0)*var(--s,120ms) + var(--b,0ms))}
+.on>.ln>span,.on>.wd>span,.ln.on>span,.wd.on>span{transform:none;opacity:1}
+.fade .wd>span{transform:translateY(18px)}
+.fade.on .wd>span{transform:none}
+.fade .wd{overflow:visible;padding:0}
+
+/* header */
+header.top{display:flex;align-items:center;padding:1.5rem 1.5rem 0;font-size:.75rem;color:#fff;position:relative;z-index:5}
+@media(min-width:640px){header.top{padding:2rem 2.5rem 0}}
+.nav-l{display:none;flex:1;gap:2rem}
+@media(min-width:1024px){.nav-l{display:flex}}
+.nav-l a{opacity:.9;transition:opacity .2s;font-size:.875rem}.nav-l a:hover{opacity:1}
+.brand{display:flex;align-items:center;gap:.5rem;font-size:1rem;font-weight:500;text-transform:uppercase;letter-spacing:.2em;flex:1}
+@media(min-width:1024px){.brand{justify-content:center}}
+.brand .emblem{width:1.75rem;height:1.75rem;flex:none}
+.right{display:flex;align-items:center;gap:1rem;flex:1;justify-content:flex-end}
+.link-btn{display:none;font-size:.875rem;font-weight:500}
+.link-btn:hover{text-decoration:underline}
+@media(min-width:640px){.link-btn{display:inline}}
+.burger{width:2.5rem;height:2.5rem;display:grid;place-content:center;gap:5px;border-radius:var(--radius-pill);background:rgba(255,255,255,.15);backdrop-filter:blur(8px);transition:background .2s}
+.burger:hover{background:rgba(255,255,255,.25)}
+.burger i{display:block;width:1rem;height:1px;background:#fff}
+
+/* hero */
+.hero{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;background:var(--brand-deep);color:#fff;border-radius:var(--radius-card-lg);
+  height:calc(100svh - 1rem);min-height:36rem}
+@media(min-width:640px){.hero{height:calc(100svh - 1.5rem)}}
+.plate{position:absolute;inset:0;z-index:-10;overflow:hidden}
+.plate .in{position:absolute;left:0;right:0;top:-16%;height:132%;width:100%}
+.plate .in .crop{position:absolute;inset:0;opacity:.55}
+.plate::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,47,99,.65),rgba(15,47,99,.35),rgba(15,47,99,.75))}
+.hero .hero-emblem{position:absolute;z-index:-5;width:min(28rem,46vh);height:min(28rem,46vh);right:7%;top:26%;opacity:.95;box-shadow:0 0 6rem rgba(87,144,230,.45)}
+@media(max-width:768px){.hero-emblem{display:none}}
+h1.big{padding:1rem 1.5rem 0;font-size:12.5vw;font-weight:500;text-transform:uppercase;line-height:.85;letter-spacing:-.02em;white-space:nowrap;direction:ltr;text-align:left;font-family:"Onest",sans-serif}
+@media(min-width:640px){h1.big{padding:1rem 2.5rem 0}}
+.hero-bottom{margin-top:auto;padding:0 1.5rem 2rem;display:flex;flex-direction:column;gap:1.5rem}
+@media(min-width:640px){.hero-bottom{padding:0 2.5rem 2.5rem;flex-direction:row;justify-content:space-between;align-items:flex-end}}
+.tagline{font-size:2.4rem;font-weight:500;line-height:1.15;color:rgba(255,255,255,.88)}
+.cluster{display:flex;align-items:flex-end;gap:1rem}
+.glass{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.1);padding:.75rem;border-radius:var(--radius-card);box-shadow:0 .5rem 2rem rgba(15,47,99,.2);backdrop-filter:blur(10px)}
+.slider{display:none;width:16rem;flex-direction:column;gap:.75rem}
+@media(min-width:768px){.slider{display:flex}}
+.slide-stage{position:relative;height:5.2rem}
+.slide-card{position:absolute;inset:0;display:flex;gap:.75rem}
+.slide-card .crop{width:3.5rem;height:3.5rem;border-radius:.75rem;flex:none}
+.slide-card b{display:block;font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+.slide-card span{display:block;font-size:.7rem;opacity:.8}
+.slide-card u{font-size:.65rem}
+.member{width:100%;max-width:20rem;display:flex;gap:.75rem;align-items:stretch}
+@media(min-width:640px){.member{width:15rem}}
+.member .l{display:flex;flex-direction:column;justify-content:space-between;flex:1}
+.member .v{font-size:1.875rem;font-weight:500;line-height:1}
+.dots4{display:flex}.dots4 i{width:1.25rem;height:1.25rem;border-radius:50%;border:1px solid rgba(15,47,99,.4);margin-inline-end:-.5rem}
+.member small{font-size:.65rem;opacity:.8}
+.member .crop{width:4rem;aspect-ratio:3/4;border-radius:.75rem;flex:none}
+
+/* shared */
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:500;text-transform:uppercase;color:var(--ink-soft)}
+.eyebrow::before{content:"";width:.375rem;height:.375rem;border-radius:50%;background:var(--brand)}
+.eyebrow.light{color:rgba(255,255,255,.7)}.eyebrow.light::before{background:var(--brand-light)}
+h2.h{font-size:3rem;font-weight:500;line-height:1.2;margin-top:1rem}
+.pill{display:inline-flex;align-items:center;gap:.5rem;border-radius:var(--radius-pill);padding:.875rem 1.75rem;font-size:.875rem;font-weight:500;transition:background .2s,color .2s}
+.pill.light{background:#fff;color:var(--brand-deep)}.pill.light:hover{background:var(--brand-light);color:#fff}
+.pill.solid{background:var(--ink);color:#fff}.pill.solid:hover{background:var(--brand-deep)}
+.arr{width:1rem;height:1rem;flex:none;transform:scaleX(-1)}
+.arr.rtl-keep{transform:none}
+.abtn{width:3rem;height:3rem;border-radius:50%;display:grid;place-items:center;border:1px solid var(--hairline);transition:all .2s}
+@media(min-width:640px){.abtn{width:3.5rem;height:3.5rem}}
+.abtn.outline:hover{border-color:var(--ink)}
+.abtn.solid{background:var(--ink);border-color:var(--ink);color:#fff}.abtn.solid:hover{background:var(--brand-deep)}
+.abtn svg{width:1.25rem;height:1.25rem}
+.dots{display:flex;gap:.5rem}
+.dots button{padding:.375rem}
+.dots button i{display:block;height:.375rem;width:.375rem;border-radius:var(--radius-pill);background:var(--ghost);transition:width .3s,background .3s}
+.dots button[aria-current="true"] i{width:1.25rem;background:var(--ink)}
+.dots.light button i{background:rgba(255,255,255,.4)}.dots.light button[aria-current="true"] i{background:#fff}
+
+/* trust */
+.trust{position:relative;isolation:isolate;overflow:hidden;background:var(--background);padding:4rem 1.5rem}
+@media(min-width:640px){.trust{padding:5rem 2.5rem}}
+.badges{position:relative;z-index:20;display:flex;flex-direction:column;gap:1.5rem;justify-content:space-between}
+@media(min-width:640px){.badges{flex-direction:row}}
+.pct{width:7rem;height:7rem;border-radius:50%;background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+@media(min-width:640px){.pct{width:8rem;height:8rem}}
+.pct b{font-size:1.5rem;font-weight:500}.pct span{font-size:.6rem;color:var(--ink-soft);max-width:7em}
+.bcard{max-width:28rem;display:flex;gap:1rem;border-radius:var(--radius-card);background:var(--surface);padding:1.25rem}
+@media(min-width:640px){.bcard{gap:1.25rem;padding:1.5rem}}
+.bcard .idx{align-self:flex-start;border-radius:.75rem;background:var(--background);padding:.5rem 1rem;font-size:1.25rem;font-weight:500}
+.bcard h3{font-size:1.125rem;font-weight:500}.bcard p{font-size:.75rem;color:var(--ink-soft);margin-top:.5rem;line-height:1.7}
+h2.ghost{pointer-events:none;user-select:none;z-index:0;position:relative;max-width:88rem;margin:3rem auto 0;font-size:8.2vw;font-weight:500;text-transform:uppercase;line-height:1.02;letter-spacing:-.02em;direction:ltr;font-family:"Onest",sans-serif}
+h2.ghost .row{display:flex;justify-content:space-between}
+h2.ghost .gw{color:var(--ghost)}h2.ghost .gw.ink{color:var(--ink)}
+.gw .ln{padding-bottom:.12em}
+.coach{z-index:10;margin:2rem auto 0;width:13rem}
+@media(min-width:640px){.coach{position:absolute;left:50%;top:50%;margin:0;width:16rem;translate:-50% -50%}}
+.coach figure{margin:0;transform:rotate(6deg);aspect-ratio:3/4;border-radius:var(--radius-card);background:var(--brand);overflow:hidden;position:relative}
+.coach .crop{position:absolute;inset:0}
+.cap{position:absolute;inset-inline:.75rem;bottom:.75rem;border-radius:.75rem;background:rgba(15,47,99,.4);color:#fff;backdrop-filter:blur(8px);padding:.5rem .75rem}
+.cap b{display:block;font-size:.875rem;font-weight:500}.cap span{display:block;font-size:.65rem;opacity:.8}
+.controls{position:relative;z-index:20;margin-top:3rem;display:flex;align-items:center;justify-content:space-between}
+@media(min-width:640px){.controls{margin-top:6rem}}
+
+/* programs */
+.programs{background:var(--surface);padding:6rem 1.5rem}
+@media(min-width:640px){.programs{padding:6rem 2.5rem}}
+.plist{margin-top:3.5rem}
+.plist li{border-top:1px solid var(--hairline)}.plist li:last-child{border-bottom:1px solid var(--hairline)}
+.plist a{display:flex;align-items:center;gap:1.5rem;padding:1.75rem 0}
+.plist a:focus-visible{background:var(--background)}
+.pn{width:2.5rem;font-size:.875rem;font-weight:500;color:var(--ink-soft)}
+.pt{flex:1}
+.pt h3{font-size:1.5rem;font-weight:500;font-family:"Onest","Vazirmatn",sans-serif}
+@media(min-width:640px){.pt h3{font-size:1.875rem}}
+.pt p{font-size:.875rem;color:var(--ink-soft);margin-top:.25rem}
+.pc{width:2.75rem;height:2.75rem;border-radius:50%;border:1px solid var(--hairline);display:grid;place-items:center;overflow:hidden}
+.pc svg{width:1.25rem;height:1.25rem}
+
+/* facilities */
+.fac{background:var(--background);border-radius:var(--radius-card-lg);margin-top:-2.5rem;padding:4rem 1.5rem 5rem;position:relative}
+@media(min-width:640px){.fac{padding:4rem 2.5rem 5rem}}
+.fgrid{display:grid;gap:2.5rem;align-items:end}
+@media(min-width:768px){.fgrid{grid-template-columns:1fr 1fr}}
+.intro{max-width:24rem}
+.intro .emblem{width:4rem;height:4rem}
+.intro h2{margin-top:1.5rem}
+.intro p{font-size:.875rem;color:var(--ink-soft);max-width:20rem;margin-top:1.5rem;line-height:1.9}
+.cards{display:flex;align-items:flex-end;gap:1.25rem}
+.cards>div{flex:1}
+.cards>div:nth-child(2){margin-bottom:2rem}
+.tile{aspect-ratio:3/4;border-radius:var(--radius-card);overflow:hidden;background:var(--surface);position:relative}
+.tile .crop{position:absolute;inset:0}
+.tile .cap.teal{background:rgba(11,110,151,.55)}.tile .cap{padding:.75rem 1rem}
+
+/* stats */
+.stats{background:var(--brand-deep);color:#fff;border-radius:var(--radius-card-lg);margin-top:.75rem;padding:5rem 1.5rem}
+@media(min-width:640px){.stats{padding:5rem 2.5rem}}
+dl.sg{display:grid;grid-template-columns:1fr 1fr;gap:3rem 2rem;margin-top:4rem}
+@media(min-width:1024px){dl.sg{grid-template-columns:repeat(4,1fr)}}
+.sg>div{border-top:1px solid rgba(255,255,255,.2);padding-top:1.25rem}
+.sg dd{margin:0}
+.sg .val{font-size:3.75rem;font-weight:500;line-height:1.1;font-family:"Onest",sans-serif}
+@media(min-width:640px){.sg .val{font-size:4.5rem}}
+.sg .lab{font-size:.875rem;color:rgba(255,255,255,.65);margin-top:.75rem}
+
+/* candidates */
+.cand{background:var(--background);padding:5rem 1.5rem}
+@media(min-width:640px){.cand{padding:6rem 2.5rem}}
+.cgrid{display:grid;gap:1.25rem;margin-top:3.5rem}
+@media(min-width:640px){.cgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:768px){.cgrid{grid-template-columns:repeat(3,1fr)}}
+.cc{background:var(--surface);border-radius:var(--radius-card);padding:.75rem;height:100%}
+.cc .crop{aspect-ratio:4/3;border-radius:1.1rem}
+.cc .meta{padding:1rem .5rem .5rem}
+.cc b{display:block;font-weight:500;font-size:1.125rem;font-family:"Onest","Vazirmatn",sans-serif}
+.cc span{font-size:.875rem;color:var(--ink-soft)}
+
+/* footer */
+footer{background:var(--brand-deep);color:#fff;border-radius:var(--radius-card-lg);margin-top:.75rem;padding:3.5rem 1.5rem}
+@media(min-width:640px){footer{padding:4rem 2.5rem}}
+.cta{border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:3.5rem;display:flex;flex-direction:column;gap:1.5rem;justify-content:space-between}
+@media(min-width:640px){.cta{flex-direction:row;align-items:flex-end}}
+.cta p{font-size:3.75rem;font-weight:500;line-height:1.15;margin-top:1rem}
+.cols{display:grid;gap:2.5rem;padding:3.5rem 0}
+@media(min-width:768px){.cols{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+.cols .bl{max-width:20rem}
+.cols .bl p{font-size:.875rem;color:rgba(255,255,255,.65);margin-top:1rem;line-height:1.9}
+.cols address{font-style:normal;margin-top:1.5rem;font-size:.875rem;color:rgba(255,255,255,.8);display:flex;flex-direction:column;gap:.25rem}
+.cols h4{font-size:.75rem;font-weight:500;color:rgba(255,255,255,.5);margin-bottom:1rem}
+.cols ul{font-size:.875rem;color:rgba(255,255,255,.8);display:flex;flex-direction:column;gap:.75rem}
+.cols a:hover,.bottom a:hover{color:#fff;text-decoration:underline}
+.bottom{border-top:1px solid rgba(255,255,255,.15);padding-top:2rem;font-size:.875rem;color:rgba(255,255,255,.6);display:flex;flex-direction:column;gap:1.25rem}
+@media(min-width:640px){.bottom{flex-direction:row;justify-content:space-between;align-items:center}}
+.bottom nav{display:flex;gap:1.25rem}
+
+/* loader */
+#loader{position:fixed;inset:0;z-index:200;background:var(--brand-deep);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;transition:transform 850ms var(--cubic)}
+#loader.out{transform:translateY(-105%)}
+#loader .wm{display:flex;align-items:center;gap:.75rem;font-size:1.5rem;font-weight:500}
+#loader .wm .emblem{width:2.75rem;height:2.75rem}
+.track{width:10rem;height:1px;border-radius:99px;background:rgba(255,255,255,.2);overflow:hidden}
+.track i{display:block;height:100%;background:#fff;transform:scaleX(0);transform-origin:left;transition:transform 1280ms var(--cubic) 120ms}
+.track.go i{transform:scaleX(1)}
+
+/* modal + menu */
+.overlay{position:fixed;inset:0;z-index:90;display:flex;align-items:flex-end;justify-content:center;padding:.75rem;pointer-events:none}
+@media(min-width:640px){.overlay{align-items:center;padding:1.5rem}}
+.overlay.open{pointer-events:auto}
+.bd{position:absolute;inset:0;background:rgba(15,47,99,.4);backdrop-filter:blur(6px);opacity:0}
+.panel{position:relative;width:100%;max-height:92svh;overflow-y:auto;border-radius:var(--radius-card-lg);background:var(--surface-card);padding:1.5rem;color:var(--ink);box-shadow:0 2rem 6rem rgba(15,47,99,.35);opacity:0}
+@media(min-width:640px){.panel{max-width:32rem;padding:2rem}}
+.mh{display:flex;justify-content:space-between;align-items:flex-start}
+.mh h2{font-size:2.25rem;font-weight:500;line-height:1.2;margin-top:.75rem}
+@media(min-width:640px){.mh h2{font-size:3rem}}
+.xbtn{width:2.5rem;height:2.5rem;border-radius:50%;background:var(--surface);display:grid;place-items:center;flex:none}
+.xbtn:hover{background:var(--hairline)}
+.xbtn svg{width:1.25rem;height:1.25rem}
+form{margin-top:1.75rem;display:flex;flex-direction:column;gap:1rem}
+label{display:block;font-size:.75rem;font-weight:500;color:var(--ink-soft);margin-bottom:.5rem}
+input,textarea{width:100%;border-radius:.75rem;border:1px solid var(--hairline);background:var(--background);padding:.75rem 1rem;font:inherit;font-size:.875rem;color:inherit}
+input:focus,textarea:focus{outline:0;border-color:var(--brand-light);box-shadow:0 0 0 2px rgba(87,144,230,.3)}
+.pill:disabled{opacity:.6}
+.success{margin-top:2rem;border-radius:var(--radius-card);background:var(--surface);padding:1.5rem;text-align:center;display:none;flex-direction:column;align-items:center;gap:.75rem}
+.success .ck{width:3rem;height:3rem;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center}
+.success .ck svg{width:1.5rem;height:1.5rem}
+.success h3{font-size:1.125rem;font-weight:500}.success p{font-size:.875rem;color:var(--ink-soft)}
+#menu{z-index:70;flex-direction:column;padding:0;align-items:stretch;justify-content:flex-start}
+#menu .bd{background:var(--brand-deep);backdrop-filter:none}
+#menu .mp{position:relative;display:flex;flex-direction:column;height:100%;padding:.5rem;color:#fff;opacity:0}
+@media(min-width:640px){#menu .mp{padding:.75rem}}
+#menu .inner{display:flex;flex-direction:column;height:100%;padding:1.5rem}
+@media(min-width:640px){#menu .inner{padding:2rem 2.5rem}}
+#menu .xbtn{background:rgba(255,255,255,.15)}#menu .xbtn:hover{background:rgba(255,255,255,.25)}
+#menu nav.big{flex:1;display:flex;flex-direction:column;justify-content:center;gap:.5rem}
+#menu nav.big a{display:block;font-size:3rem;font-weight:500;line-height:1.3;transition:color .2s}
+@media(min-width:640px){#menu nav.big a{font-size:4.5rem}}
+#menu nav.big a:hover{color:var(--brand-light)}
+#menu .mb{border-top:1px solid rgba(255,255,255,.15);padding-top:2rem;display:flex;flex-direction:column;gap:1.5rem}
+@media(min-width:640px){#menu .mb{flex-direction:row;align-items:center;justify-content:space-between}}
+@media(prefers-reduced-motion:reduce){#loader{transition:none}.ln>span,.wd>span{transition-duration:1ms!important}}
 </style>
-
 </head>
-
-
 <body>
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
-<header>
-
-<div class="container nav">
-
-
-<a href="#home" class="logo">
-
-<div class="logo-icon"></div>
-
-<div class="logo-text">
-
-<strong>
-mohajeran 2020
-</strong>
-
-<span>
-مرکز آزمون‌های زبان
-</span>
-
+<div id="loader" role="status" aria-label="در حال بارگذاری">
+  <div class="wm" id="lw" style="opacity:0"><span class="emblem"><i></i></span><span class="lat">Mohajeran</span></div>
+  <div class="track" id="lt"><i></i></div>
 </div>
 
-</a>
-
-
-<nav class="nav-links">
-
-<a href="#home">
-خانه
-</a>
-
-<a href="#exams">
-آزمون‌ها
-</a>
-
-<a href="#process">
-نحوه برگزاری
-</a>
-
-<a href="#security">
-امنیت
-</a>
-
-<a href="#contact">
-ارتباط با ما
-</a>
-
-</nav>
-
-
-<a href="#contact" class="nav-button">
-درخواست آزمون
-</a>
-
-
-</div>
-
-</header>
-
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero" id="home">
-
-
-<div class="hero-content">
-
-<div class="eyebrow">
-مرکز تخصصی آزمون‌های بین‌المللی
-</div>
-
-
-<h1>
-مسیر شما به فرصت‌های جهانی
-</h1>
-
-
-<p class="hero-description">
-
-</p>
-
-
-<div class="hero-buttons">
-
-<a href="#exams" class="btn btn-primary">
-مشاهده آزمون‌ها
-</a>
-
-
-<a href="#process" class="btn btn-secondary">
-نحوه برگزاری
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     LANDMARKS
-===================================================== -->
-
-<div class="landmarks">
-
-
-<!-- NEW YORK -->
-
-<div class="landmark">
-
-<svg viewBox="0 0 100 220">
-
-<path d="
-M20 210
-H80
-
-M29 210
-V70
-H71
-V210
-
-M34 70
-V50
-H66
-V70
-
-M39 50
-V34
-H61
-V50
-
-M44 34
-V20
-H56
-V34
-
-M49 20
-V5
-H51
-V20
-
-M31 88
-H69
-M31 106
-H69
-M31 124
-H69
-M31 142
-H69
-M31 160
-H69
-M31 178
-H69
-
-M35 88
-V178
-M45 88
-V178
-M55 88
-V178
-M65 88
-V178
-"/>
-
-</svg>
-
-<span class="landmark-name">
-NEW YORK
-</span>
-
-</div>
-
-
-
-<!-- STATUE OF LIBERTY -->
-
-<div class="landmark">
-
-<svg viewBox="0 0 100 220">
-
-<path d="
-M20 210
-H80
-
-M28 194
-H72
-
-M34 194
-L38 178
-H62
-L66 194
-
-M41 178
-V98
-
-M59 178
-V98
-
-M37 98
-H63
-
-M44 98
-V70
-L35 57
-
-M56 98
-V70
-L65 57
-
-M50 70
-V45
-
-M50 45
-L40 35
-
-M50 45
-L59 33
-
-M40 58
-L22 50
-
-M60 58
-L78 48
-
-M44 70
-L36 57
-
-M56 70
-L64 57
-
-M44 46
-L37 28
-
-M56 46
-L63 28
-"/>
-
-</svg>
-
-<span class="landmark-name">
-NEW YORK
-</span>
-
-</div>
-
-
-
-<!-- BIG BEN -->
-
-<div class="landmark">
-
-<svg viewBox="0 0 100 220">
-
-<path d="
-M25 210
-H75
-
-M31 210
-V56
-H69
-V210
-
-M28 56
-H72
-
-M34 46
-H66
-
-M37 46
-L50 27
-L63 46
-
-M42 56
-L50 66
-L58 56
-
-M50 66
-V88
-
-M38 88
-H62
-V113
-H38
-V88
-
-M50 88
-V113
-
-M37 120
-H63
-V145
-H37
-V120
-
-M50 120
-V145
-
-M34 153
-H66
-V178
-H34
-V153
-
-M50 153
-V178
-"/>
-
-</svg>
-
-<span class="landmark-name">
-LONDON
-</span>
-
-</div>
-
-
-
-<!-- PISA -->
-
-<div class="landmark">
-
-<svg viewBox="0 0 100 220">
-
-<path d="
-M18 210
-H82
-
-M33 210
-L45 45
-
-M67 210
-L55 45
-
-M45 45
-H55
-
-M42 45
-L50 33
-L58 45
-
-M37 70
-H63
-
-M35 93
-H65
-
-M33 116
-H67
-
-M31 139
-H69
-
-M29 162
-H71
-
-M27 185
-H73
-
-M44 70
-V80
-
-M56 70
-V80
-
-M42 93
-V103
-
-M58 93
-V103
-
-M40 116
-V126
-
-M60 116
-V126
-
-M38 139
-V149
-
-M62 139
-V149
-
-M36 162
-V172
-
-M64 162
-V172
-"/>
-
-</svg>
-
-<span class="landmark-name">
-PISA
-</span>
-
-</div>
-
-
-
-<!-- EIFFEL -->
-
-<div class="landmark">
-
-<svg viewBox="0 0 100 220">
-
-<path d="
-M15 210
-H85
-
-M29 210
-L45 144
-L36 45
-
-M71 210
-L55 144
-L64 45
-
-M36 45
-L50 17
-L64 45
-
-M42 70
-H58
-
-M39 93
-H61
-
-M35 117
-H65
-
-M29 143
-H71
-
-M24 168
-H76
-
-M50 17
-V210
-
-M42 70
-L50 90
-L58 70
-
-M35 117
-L50 135
-L65 117
-
-M29 143
-L50 168
-L71 143
-"/>
-
-</svg>
-
-<span class="landmark-name">
-PARIS
-</span>
-
-</div>
-
-
-
-<!-- MILAD -->
-
-<div class="landmark">
-
-<svg viewBox="0 0 100 220">
-
-<path d="
-M22 210
-H78
-
-M39 210
-L45 128
-
-M61 210
-L55 128
-
-M45 128
-H55
-
-M42 128
-L50 110
-L58 128
-
-M36 110
-H64
-
-M40 95
-H60
-
-M43 80
-H57
-
-M46 65
-H54
-
-M50 65
-V8
-
-M35 110
-H65
-
-M32 95
-H68
-
-M39 80
-H61
-"/>
-
-</svg>
-
-<span class="landmark-name">
-TEHRAN
-</span>
-
-</div>
-
-
-</div>
-
+<main>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="plate"><div class="in" data-par="y:0:12:%"><div class="crop"><div class="ph t2"></div></div></div></div>
+  <div class="hero-emblem emblem" data-gate data-iv='{"o":0,"scale":0.9,"delay":300,"t":170,"f":26}'><i></i></div>
+
+  <header class="top">
+    <nav class="nav-l"><a href="#programs">آزمون‌ها</a><a href="#facilities">مسیر تحصیلی و مهاجرت</a></nav>
+    <a class="brand" href="#top"><span class="emblem"><i></i></span><span class="lat">Mohajeran</span></a>
+    <div class="right">
+      <button class="link-btn" data-open-modal>ثبت‌نام و مشاوره</button>
+      <button class="burger" id="burger" aria-label="منو"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <h1 class="big" id="hero-title" data-words="Mohajeran" data-gate data-stagger="140" data-dur="1100" aria-label="Mohajeran"></h1>
+
+  <div class="hero-bottom">
+    <p class="tagline" data-lines="آماده شو،|جهانی شو" data-gate data-b="350" data-s="110" data-dur="900"></p>
+    <div class="cluster">
+      <div class="slider" data-gate data-iv='{"o":0,"y":28,"delay":650,"t":200,"f":26}'>
+        <div class="glass slide-stage" id="slideStage"></div>
+        <div class="dots light" id="heroDots"></div>
+      </div>
+      <article class="glass member" data-gate data-iv='{"o":0,"y":28,"delay":780,"t":200,"f":26}'>
+        <div class="l"><div class="v">6</div><div class="dots4"><i style="background:#5790e6"></i><i style="background:#c2e029"></i><i style="background:#0b6e97"></i><i style="background:#fff"></i></div><small>آزمون بین‌المللی زیر یک سقف</small></div>
+        <div class="crop" role="img" aria-label="داوطلب در حال شرکت در آزمون PTE"><div class="ph t6"></div></div>
+      </article>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =====================================================
-     EXAMS
-===================================================== -->
-
-<section class="exams" id="exams">
-
-<div class="container">
-
-
-<div class="section-header">
-
-<div class="section-line"></div>
-
-<h2>
-آزمون‌های زبان
-</h2>
-
-<p>
-آزمون موردنظر خود را انتخاب کنید و برای اطلاعات بیشتر وارد سایت مرجع شوید.
-</p>
-
-</div>
-
-
-
-<div class="exam-grid">
-
-
-<!-- IELTS -->
-
-<article class="exam-card">
-
-<div class="exam-logo">
-IELTS
-</div>
-
-<h3>
-IELTS
-</h3>
-
-<p>
-آزمون بین‌المللی زبان انگلیسی برای تحصیل، مهاجرت و اهداف حرفه‌ای.
-</p>
-
-<div class="exam-bottom">
-
-<span class="language">
-English
-</span>
-
-<a
-href="https://ielts.org/take-a-test"
-target="_blank"
-rel="noopener"
-class="more-button"
->
-اطلاعات بیشتر
-</a>
-
-</div>
-
-</article>
-
-
-
-<!-- TOEFL -->
-
-<article class="exam-card">
-
-<div class="exam-logo">
-TOEFL
-</div>
-
-<h3>
-TOEFL
-</h3>
-
-<p>
-آزمون زبان انگلیسی با کاربرد گسترده در پذیرش دانشگاه‌ها.
-</p>
-
-<div class="exam-bottom">
-
-<span class="language">
-English
-</span>
-
-<a
-href="https://www.ets.org/toefl.html"
-target="_blank"
-rel="noopener"
-class="more-button"
->
-اطلاعات بیشتر
-</a>
-
-</div>
-
-</article>
-
-
-
-<!-- PTE -->
-
-<article class="exam-card">
-
-<div class="exam-logo">
-PTE
-</div>
-
-<h3>
-PTE
-</h3>
-
-<p>
-آزمون کامپیوتری زبان انگلیسی برای اهداف تحصیلی و مهاجرتی.
-</p>
-
-<div class="exam-bottom">
-
-<span class="language">
-English
-</span>
-
-<a
-href="https://www.pearsonpte.com/"
-target="_blank"
-rel="noopener"
-class="more-button"
->
-اطلاعات بیشتر
-</a>
-
-</div>
-
-</article>
-
-
-
-<!-- DUOLINGO -->
-
-<article class="exam-card">
-
-<div class="exam-logo">
-DUOLINGO
-</div>
-
-<h3>
-Duolingo English Test
-</h3>
-
-<p>
-آزمون آنلاین زبان انگلیسی با فرایند کاملاً دیجیتال.
-</p>
-
-<div class="exam-bottom">
-
-<span class="language">
-Online
-</span>
-
-<a
-href="https://englishtest.duolingo.com/"
-target="_blank"
-rel="noopener"
-class="more-button"
->
-اطلاعات بیشتر
-</a>
-
-</div>
-
-</article>
-
-
-
-<!-- FRENCH -->
-
-<article class="exam-card">
-
-<div class="exam-logo">
-DELF
-</div>
-
-<h3>
-DELF / TCF / TEF
-</h3>
-
-<p>
-آزمون‌ها و مدارک سنجش زبان فرانسوی.
-</p>
-
-<div class="exam-bottom">
-
-<span class="language">
-Français
-</span>
-
-<a
-href="https://www.france-education-international.fr/"
-target="_blank"
-rel="noopener"
-class="more-button"
->
-اطلاعات بیشتر
-</a>
-
-</div>
-
-</article>
-
-
-
-<!-- GERMAN -->
-
-<article class="exam-card">
-
-<div class="exam-logo">
-GOETHE
-</div>
-
-<h3>
-Goethe / ÖSD
-</h3>
-
-<p>
-آزمون‌ها و مدارک سنجش زبان آلمانی.
-</p>
-
-<div class="exam-bottom">
-
-<span class="language">
-Deutsch
-</span>
-
-<a
-href="https://www.goethe.de/en/spr/kup/prf.html"
-target="_blank"
-rel="noopener"
-class="more-button"
->
-اطلاعات بیشتر
-</a>
-
-</div>
-
-</article>
-
-
-</div>
-
-</div>
-
+<!-- TRUST / candidate carousel -->
+<section class="trust" id="trust">
+  <div class="badges">
+    <div class="pct" data-iv='{"o":0,"scale":0.9,"t":220,"f":22}'><b>2020</b><span>سال تأسیس مؤسسه مهاجران</span></div>
+    <article class="bcard" data-iv='{"o":0,"y":24,"delay":120,"t":200,"f":26}'>
+      <div class="idx">#01</div>
+      <div><h3>مرکز آمادگی آزمون‌های بین‌المللی</h3><p>از آزمون‌های زبان تا آزمون‌های تحصیلات تکمیلی؛ با تمرین در شرایطی شبیه آزمون واقعی برای رسیدن به نمره هدف آماده می‌شوید.</p></div>
+    </article>
+  </div>
+
+  <h2 class="ghost" id="trust-title" aria-hidden="true">
+    <div class="row"><span class="gw" data-par="x:-3:3:%"></span><span class="gw" data-par="x:3:-3:%"></span></div>
+    <div class="row"><span class="gw ink" data-par="x:-2:4:%"></span><span class="gw" data-par="x:4:-3:%"></span></div>
+  </h2>
+
+  <div class="coach" data-iv='{"o":0,"y":60,"scale":0.92,"t":170,"f":26}'>
+    <figure><div class="crop" id="coachImg"><div class="ph t1"></div></div>
+      <figcaption class="cap"><b id="coachName"></b><span id="coachRole"></span></figcaption></figure>
+  </div>
+
+  <div class="controls">
+    <button class="abtn outline" id="prev" aria-label="قبلی"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <div class="dots" id="trustDots"></div>
+    <button class="abtn solid" id="next" aria-label="بعدی"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(-1)"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </div>
 </section>
 
-
-
-<!-- =====================================================
-     PROCESS
-===================================================== -->
-
-<section class="process" id="process">
-
-<div class="container process-layout">
-
-
-<!-- CANDIDATE PHOTOS -->
-
-<div class="candidate-images">
-
-
-<div class="candidate">
-
-<img
-src="images/candidate1.jpg"
-alt="داوطلب آزمون"
->
-
-</div>
-
-
-<div class="candidate">
-
-<img
-src="images/candidate2.jpg"
-alt="داوطلب آزمون"
->
-
-</div>
-
-
-<div class="candidate">
-
-<img
-src="images/candidate3.jpg"
-alt="داوطلب آزمون"
->
-
-</div>
-
-
-<div class="candidate">
-
-<img
-src="images/candidate4.jpg"
-alt="داوطلب آزمون"
->
-
-</div>
-
-
-<div class="candidate">
-
-<img
-src="images/candidate5.jpg"
-alt="داوطلب آزمون"
->
-
-</div>
-
-
-<div class="candidate">
-
-<img
-src="images/candidate6.jpg"
-alt="داوطلب آزمون"
->
-
-</div>
-
-
-</div>
-
-
-
-<!-- PROCESS TEXT -->
-
-<div class="process-box">
-
-
-<h2>
-چگونه آزمون می‌گیریم؟
-</h2>
-
-
-<p class="process-intro">
-
-خوش نام ترین مرکز برگزاری آزمون های زبان انگلیسی، آلمانی، فرانسوی مستقیم و بدون واسطه مهاجران۲۰۲۰
-
-</p>
-
-
-<div class="slogan">
-
-صداقت و تخصص از ما، اعتماد از شما
-
-</div>
-
-
-
-<div class="features">
-
-
-<div class="feature">
-
-<span class="check">
-✓
-</span>
-
-<div>
-
-<strong>
-برگزاری آزمون‌ها
-</strong>
-
-<div class="feature-text">
-
-برگزاری آزمون های آنلاین و سنتری تافل، آیلتس، دولینگو، PTE, Celpip,OET,GRE,GMAT ناتی تولک، تیل، کِی،EPT, MSRT، چنت، CSCA آزمون فرانسوی DELF,TCF,TEF، آزمون آلمانی گوته OSD
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="feature">
-
-<span class="check">
-✓
-</span>
-
-<div>
-
-<strong>
-قابلیت اخذ نمره
-</strong>
-
-<div class="feature-text">
-
-قابلیت اخذ نمره حتی ۹ آیلتس و معادل آن در آزمون های دیگر
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="feature">
-
-<span class="check">
-✓
-</span>
-
-<div>
-
-<strong>
-مصاحبه و آزمون ورودی
-</strong>
-
-<div class="feature-text">
-
-مصاحبه دانشگاه، سفارت و آزمون ورودی دانشگاه های دنیا
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="feature">
-
-<span class="check">
-✓
-</span>
-
-<div>
-
-<strong>
-تفاوت ما
-</strong>
-
-<div class="feature-text">
-
-پرداخت وجه بعد از رویت کارنامه
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="feature">
-
-<span class="check">
-✓
-</span>
-
-<div>
-
-<strong>
-بازدید حضوری
-</strong>
-
-<div class="feature-text">
-
-امکان بازدید آزمون های در حال انجام هر روز بخواهید بصورت حضوری
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="feature">
-
-<span class="check">
-✓
-</span>
-
-<div>
-
-<strong>
-آموزش
-</strong>
-
-<div class="feature-text">
-
-ارائه آموزش حضوری و آنلاین تا رسیدن به نمره دلخواه در آزمون
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="feature">
-
-<span class="check">
-✓
-</span>
-
-<div>
-
-<strong>
-آموزش زبان
-</strong>
-
-<div class="feature-text">
-
-آموزش زبان تا سطح مکالمه روان بعد از انجام آزمون با اساتید آقا و خانم
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="feature">
-
-<span class="check">
-✓
-</span>
-
-<div>
-
-<strong>
-تخصص آموزشی
-</strong>
-
-<div class="feature-text">
-
-تدریس تمام آزمون های نامبرده، چون ما مدرس زبان هستیم همه امکانات فنی فراهم است
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
-
+<!-- PROGRAMS -->
+<section class="programs" id="programs">
+  <span class="eyebrow">آزمون‌های بین‌المللی</span>
+  <h2 class="h" id="programs-title" data-lines="مسیرت را|انتخاب کن"></h2>
+  <ul class="plist" id="plist"></ul>
 </section>
 
-
-
-<!-- =====================================================
-     SECURITY
-===================================================== -->
-
-<section class="security" id="security">
-
-<div class="container">
-
-
-<div class="section-header">
-
-<div class="section-line"></div>
-
-<h2>
-امنیت شما چگونه است؟
-</h2>
-
-<p>
-</p>
-
-</div>
-
-
-
-<div class="security-grid">
-
-
-<div class="security-card">
-
-<div class="security-icon">
-✓
-</div>
-
-<h3>
-احراز هویت
-</h3>
-
-<p>
-</p>
-
-</div>
-
-
-
-<div class="security-card">
-
-<div class="security-icon">
-▣
-</div>
-
-<h3>
-محیط آزمون
-</h3>
-
-<p>
-</p>
-
-</div>
-
-
-
-<div class="security-card">
-
-<div class="security-icon">
-◉
-</div>
-
-<h3>
-نظارت بر آزمون
-</h3>
-
-<p>
-</p>
-
-</div>
-
-
-
-<div class="security-card">
-
-<div class="security-icon">
-▤
-</div>
-
-<h3>
-حفاظت اطلاعات
-</h3>
-
-<p>
-</p>
-
-</div>
-
-
-
-<div class="security-card">
-
-<div class="security-icon">
-✓
-</div>
-
-<h3>
-نتایج و کارنامه
-</h3>
-
-<p>
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
+<!-- FACILITIES -->
+<section class="fac" id="facilities">
+  <div class="fgrid">
+    <div class="intro">
+      <div class="emblem" data-iv='{"o":0,"scale":0.85,"t":240,"f":20}'><i></i></div>
+      <h2 class="h" id="facilities-title" data-lines="تحصیل،|کار و|مهاجرت" data-s="120"></h2>
+      <p class="fade" data-words-text="از کانادا و استرالیا تا اروپا، بریتانیا، آمریکا و چین؛ نمره‌ای را که مقصدت می‌خواهد بساز، با آمادگی هدفمند برای آزمون‌های زبان و تحصیلات تکمیلی."></p>
+    </div>
+    <div class="cards">
+      <div data-iv='{"o":0,"y":48,"delay":0,"t":180,"f":26}'><figure class="tile hv" data-hv='{"scale":1.03,"t":300,"f":22}' style="margin:0"><div class="crop"><div class="ph t4"></div></div><figcaption class="cap"><b>GRE</b><span>آزمون ورود به تحصیلات تکمیلی</span></figcaption></figure></div>
+      <div data-iv='{"o":0,"y":48,"delay":140,"t":180,"f":26}'><figure class="tile hv" data-hv='{"scale":1.03,"t":300,"f":22}' style="margin:0"><div class="crop"><div class="ph t5"></div></div><figcaption class="cap teal"><b>GMAT</b><span>آزمون ورود به مدیریت و MBA</span></figcaption></figure></div>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section class="contact" id="contact">
-
-<div class="container">
-
-
-<div class="section-header">
-
-<div class="section-line"></div>
-
-<h2>
-ارتباط با ما
-</h2>
-
-<p>
-برای دریافت اطلاعات بیشتر و هماهنگی آزمون با ما در ارتباط باشید.
-</p>
-
-</div>
-
-
-
-<div class="contact-grid">
-
-
-<!-- PHONE -->
-
-<div class="contact-item">
-
-<div class="contact-icon">
-☎
-</div>
-
-<h3>
-تلفن تماس
-</h3>
-
-<p>
-09057911063
-</p>
-
-</div>
-
-
-
-<!-- WHATSAPP -->
-
-<div class="contact-item">
-
-<div class="contact-icon">
-◉
-</div>
-
-<h3>
-واتساپ
-</h3>
-
-<p>
-09057911063
-</p>
-
-</div>
-
-
-
-<!-- INSTAGRAM -->
-
-<div class="contact-item">
-
-<div class="contact-icon">
-◎
-</div>
-
-<h3>
-اینستاگرام
-</h3>
-
-<p>
-mohajer.an.2020
-</p>
-
-</div>
-
-
-
-<!-- TELEGRAM -->
-
-<div class="contact-item">
-
-<div class="contact-icon">
-➤
-</div>
-
-<h3>
-تلگرام
-</h3>
-
-<p>
-Mohajeran 2020
-</p>
-
-</div>
-
-
-
-<!-- ADDRESS -->
-
-<div class="contact-item">
-
-<div class="contact-icon">
-⌖
-</div>
-
-<h3>
-آدرس
-</h3>
-
-<p>
-اشرفی اصفهانی
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
+<!-- STATS -->
+<section class="stats">
+  <span class="eyebrow light">مؤسسه مهاجران در یک نگاه</span>
+  <h2 class="h" id="stats-title" data-lines="مرکزی که|برای نمره تو|برنامه دارد"></h2>
+  <dl class="sg" id="sg"></dl>
 </section>
 
+<!-- CANDIDATES -->
+<section class="cand" id="candidates">
+  <span class="eyebrow">داوطلبان ما</span>
+  <h2 class="h" id="cand-title" data-lines="در مسیر|آزمون‌ها همراهیم"></h2>
+  <ul class="cgrid" id="cgrid"></ul>
+</section>
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-<div class="container">
-
-
-<div class="footer-grid">
-
-
-<div>
-
-<div class="logo">
-
-<div class="logo-icon"></div>
-
-<div class="logo-text">
-
-<strong>
-mohajeran 2020
-</strong>
-
-<span>
-مرکز آزمون‌های زبان
-</span>
-
-</div>
-
-</div>
-
-<p>
-مرکز برگزاری و آموزش آزمون‌های زبان
-</p>
-
-</div>
-
-
-
-<div>
-
-<h3>
-لینک‌ها
-</h3>
-
-<a href="#home">
-خانه
-</a>
-
-<a href="#exams">
-آزمون‌ها
-</a>
-
-<a href="#process">
-نحوه برگزاری
-</a>
-
-<a href="#contact">
-ارتباط با ما
-</a>
-
-</div>
-
-
-
-<div>
-
-<h3>
-ارتباط
-</h3>
-
-<a href="#contact">
-09057911063
-</a>
-
-<a href="#contact">
-Instagram: mohajer.an.2020
-</a>
-
-<a href="#contact">
-Telegram: Mohajeran 2020
-</a>
-
-</div>
-
-
-</div>
-
-
-
-<div class="copyright">
-
-© mohajeran 2020
-
-</div>
-
-
-</div>
-
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="cta">
+    <div><span class="eyebrow light">شروع کنیم</span><p data-lines="آماده‌ای|شروع کنیم؟" style="font-family:inherit"></p></div>
+    <div data-iv='{"o":0,"y":20,"delay":150,"t":200,"f":24}'><button class="pill light" data-open-modal>ثبت‌نام و مشاوره <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+  </div>
+  <div class="cols">
+    <div class="bl">
+      <a class="brand" style="flex:none;font-size:1.125rem" href="#top"><span class="emblem"><i></i></span><span class="lat">Mohajeran</span></a>
+      <p>مؤسسه زبان‌های جهانی و شهروندی جهانی مهاجران، مرکز آمادگی آزمون‌های بین‌المللی؛ تأسیس ۲۰۲۰.</p>
+      <address id="addr"><a href="https://mohajeran2020.github.io">mohajeran2020.github.io</a></address>
+    </div>
+    <nav><h4>آزمون‌ها</h4><ul><li><a href="#programs">IELTS</a></li><li><a href="#programs">TOEFL</a></li><li><a href="#programs">Duolingo English Test</a></li><li><a href="#programs">PTE</a></li></ul></nav>
+    <nav><h4>تحصیلات تکمیلی</h4><ul><li><a href="#facilities">GRE</a></li><li><a href="#facilities">GMAT</a></li></ul></nav>
+    <nav><h4>مؤسسه</h4><ul><li><a href="#candidates">داوطلبان</a></li><li><a href="#trust">درباره ما</a></li><li><a href="#contact">تماس</a></li></ul></nav>
+  </div>
+  <div class="bottom"><span>© 2026 مؤسسه مهاجران. تمام حقوق محفوظ است.</span><nav id="social"></nav></div>
 </footer>
+</main>
 
+<!-- MODAL -->
+<div class="overlay" id="modal" aria-hidden="true">
+  <div class="bd" id="mbd"></div>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="mt" id="mpanel">
+    <div class="mh"><div><span class="eyebrow">ثبت‌نام و مشاوره</span><h2 id="mt" data-lines="شروع مسیر|از همین‌جاست" data-s="90" data-dur="800"></h2></div>
+      <button class="xbtn hv" id="mclose" aria-label="بستن" data-hv='{"rot":90,"t":300,"f":18}'><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <form id="form" novalidate>
+      <div><label for="f1">نام و نام خانوادگی</label><input id="f1" name="name" placeholder="مثلاً علی رضایی" autocomplete="name"></div>
+      <div><label for="f2">ایمیل یا شماره تماس</label><input id="f2" name="contact" placeholder="you@email.com"></div>
+      <div><label for="f3">برای کدام آزمون آماده می‌شوی؟</label><textarea id="f3" name="msg" rows="3" placeholder="IELTS آکادمیک، هدف نمره ۷…"></textarea></div>
+      <button class="pill solid" id="submit" type="submit">ثبت درخواست</button>
+    </form>
+    <div class="success" id="success"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></div>
+      <h3>درخواست ثبت شد</h3><p id="thanks"></p><button class="pill solid" id="done" type="button">باشه</button></div>
+  </div>
+</div>
 
+<!-- MENU -->
+<div class="overlay" id="menu" aria-hidden="true">
+  <div class="bd" id="menubd"></div>
+  <div class="mp" id="menup"><div class="inner">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+      <a class="brand" style="flex:none" href="#top"><span class="emblem"><i></i></span><span class="lat">Mohajeran</span></a>
+      <button class="xbtn hv" id="menuclose" aria-label="بستن" data-hv='{"rot":90,"t":300,"f":18}'><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <nav class="big" id="menunav"></nav>
+    <div class="mb"><button class="pill light" id="menubook">ثبت‌نام و مشاوره</button><nav id="msocial" style="display:flex;gap:1.25rem;color:rgba(255,255,255,.7)"></nav></div>
+  </div></div>
+</div>
+
+<script type="module">
+let Lenis;
+try { Lenis = (await import("lenis")).default; }
+catch (e) { // CDN unreachable: fall back to native scrolling so the page still works
+  Lenis = class { raf(){} start(){ document.documentElement.style.overflow=""; } stop(){} on(){} scrollTo(el){ el.scrollIntoView({behavior:"smooth"}); } };
+}
+
+/* ====== EDIT ME: contact details (empty = hidden) ====== */
+const CONFIG = {
+  email: "", phone: "", address: "", whatsapp: "",
+  social: { Instagram: "", Telegram: "", YouTube: "" }
+};
+
+/* ---------- adaptive rem (scale-up above 1920) ---------- */
+const root = document.documentElement;
+function fit(){
+  const B=16,W=1920,C=.6666, red=((W-innerWidth)/W)*100*C, size=B-(B*red)/100;
+  size>B ? root.style.fontSize=size+"px" : root.style.removeProperty("font-size");
+}
+fit(); addEventListener("resize",fit);
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isMobile = () => innerWidth <= 768;
+
+/* ---------- smooth scroll ---------- */
+const lenis = new Lenis({ smoothWheel:true });
+const raf = t => { lenis.raf(t); requestAnimationFrame(raf) }; requestAnimationFrame(raf);
+const lock = on => { on ? (lenis.stop(), root.classList.add("locked")) : (lenis.start(), root.classList.remove("locked")); };
+history.scrollRestoration="manual"; scrollTo(0,0);
+function goTo(sel){ const el=document.querySelector(sel); if(el) lenis.scrollTo(el,{offset:0}); }
+
+/* ---------- tiny spring engine ---------- */
+const live = new Set();
+class Sp{
+  constructor(el,init={}){ this.el=el; this.s={x:0,y:0,scale:1,rot:0,o:1,...init}; this.t={...this.s}; this.v={x:0,y:0,scale:0,rot:0,o:0}; this.cfg={t:200,f:26}; this.paint(); }
+  to(t,cfg){ Object.assign(this.t,t); if(cfg) this.cfg=cfg; if(reduce){ Object.assign(this.s,this.t); this.paint(); return; } live.add(this); }
+  paint(){ const s=this.s; this.el.style.transform=`translate3d(${s.x}px,${s.y}px,0) scale(${s.scale}) rotate(${s.rot}deg)`; this.el.style.opacity=s.o; }
+}
+let last=performance.now();
+(function tick(now){
+  const dt=Math.min((now-last)/1000,1/30); last=now;
+  live.forEach(sp=>{
+    let rest=true;
+    for(const k in sp.v){
+      const a=-sp.cfg.t*(sp.s[k]-sp.t[k])-sp.cfg.f*sp.v[k];
+      sp.v[k]+=a*dt; sp.s[k]+=sp.v[k]*dt;
+      const eps=(k==="x"||k==="y"||k==="rot")?.02:.0005;
+      if(Math.abs(sp.v[k])>eps*4||Math.abs(sp.s[k]-sp.t[k])>eps) rest=false;
+    }
+    if(rest){ Object.assign(sp.s,sp.t); for(const k in sp.v) sp.v[k]=0; live.delete(sp); }
+    sp.paint();
+  });
+  requestAnimationFrame(tick);
+})(last);
+
+/* ---------- ready gate (loader) ---------- */
+let readyRes; const ready = new Promise(r=>readyRes=r);
+
+/* ---------- reveal text ---------- */
+function build(el){
+  const lines = el.dataset.lines, words = el.dataset.words, wt = el.dataset.wordsText;
+  const css = (n)=>{ el.style.setProperty("--s",(el.dataset.stagger||el.dataset.s||(wt?28:120))+"ms"); el.style.setProperty("--d",(el.dataset.dur||(wt?700:950))+"ms"); el.style.setProperty("--b",(el.dataset.b||(wt?250:0))+"ms"); if(wt) el.style.setProperty("--ez","cubic-bezier(.25,1,.5,1)"); };
+  css();
+  if(lines){ el.innerHTML = lines.split("|").map((l,i)=>`<span class="ln" style="--i:${i}"><span>${l}</span></span>`).join(""); }
+  else if(words){ el.innerHTML = words.split(" ").map((w,i)=>`<span class="wd" style="--i:${i}"><span>${w}</span></span>`).join(" "); }
+  else if(wt){ el.innerHTML = wt.split(" ").map((w,i)=>`<span class="wd" style="--i:${i}"><span>${w}</span></span>`).join(" "); }
+}
+document.querySelectorAll("[data-lines],[data-words],[data-words-text]").forEach(build);
+const io = new IntersectionObserver((es)=>{ es.forEach(e=>{ if(!e.isIntersecting) return; io.unobserve(e.target);
+  const go=()=>{ const t=e.target; if(t.dataset.iv){ const c=JSON.parse(t.dataset.iv); setTimeout(()=>t._sp.to({x:0,y:0,scale:1,o:1},{t:c.t,f:c.f}),c.delay||0);} else t.classList.add("on"); };
+  e.target.hasAttribute("data-gate") ? ready.then(go) : go(); }) },{threshold:.15});
+document.querySelectorAll("[data-lines],[data-words],[data-words-text],[data-iv]").forEach(el=>{
+  if(el.dataset.iv){ const c=JSON.parse(el.dataset.iv); el._sp=new Sp(el,{o:c.o??1,y:c.y||0,x:c.x||0,scale:c.scale??1}); }
+  io.observe(el); });
+
+/* ---------- hover springs ---------- */
+document.querySelectorAll("[data-hv]").forEach(el=>{
+  const c=JSON.parse(el.dataset.hv), sp=new Sp(el), cfg={t:c.t,f:c.f};
+  const on={...c}; delete on.t; delete on.f;
+  const off={x:0,y:0,scale:1,rot:0};
+  el.addEventListener("pointerenter",()=>{ if(!isMobile()) sp.to(on,cfg) });
+  el.addEventListener("pointerleave",()=>sp.to(off,cfg));
+});
+
+/* ---------- parallax ---------- */
+const pars=[...document.querySelectorAll("[data-par]")].map(el=>{ const [p,a,b,u]=el.dataset.par.split(":"); return {el,p,a:+a,b:+b,u}; });
+function par(){
+  const vh=innerHeight;
+  pars.forEach(o=>{ const host=o.el.closest("section")||o.el; const r=host.getBoundingClientRect();
+    const t=Math.min(1,Math.max(0,(vh-r.top)/(vh+r.height))), v=o.a+(o.b-o.a)*t;
+    o.el.style.transform = o.p==="x"?`translateX(${v}${o.u})`:`translateY(${v}${o.u})`; });
+}
+lenis.on("scroll",par); addEventListener("scroll",par,{passive:true}); addEventListener("resize",par); par();
+
+/* ---------- data ---------- */
+const EXAMS = [
+  {n:"IELTS",  d:"Listening، Reading، Writing و Speaking برای تحصیل، کار و مهاجرت.", role:"آزمون آکادمیک و جنرال", tile:1},
+  {n:"TOEFL",  d:"آمادگی برای آزمون زبان انگلیسی دانشگاه‌های بین‌المللی.",           role:"آزمون زبان دانشگاهی",   tile:2},
+  {n:"Duolingo English Test", d:"آزمون آنلاین و سریع زبان انگلیسی با نتیجه کوتاه‌مدت.", role:"آزمون آنلاین زبان", tile:3},
+  {n:"GRE",    d:"Quantitative و Verbal برای پذیرش تحصیلات تکمیلی.",                  role:"تحصیلات تکمیلی",        tile:4},
+  {n:"GMAT",   d:"Verbal Reasoning و مهارت‌های تحلیلی برای مدیریت و MBA.",            role:"مدیریت و MBA",          tile:5},
+  {n:"PTE",    d:"آزمون Pearson با تمرکز ویژه روی Speaking و تکالیف کامپیوتری.",       role:"آزمون Pearson",         tile:6},
+];
+const HEADLINES = [["Expert","Result-","Driven","Prep"],["Sharper","Faster","Stronger","Reader"],["Speak","Think","Test","Online"],["Quant","Verbal","Writing","Skills"],["Think","Plan","Score","Higher"],["Speak","Describe","Score","Pearson"]];
+const arrowSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(-1)"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const dots = (host,n,i,cb)=>{ host.innerHTML=""; for(let k=0;k<n;k++){ const b=document.createElement("button"); b.setAttribute("aria-label","اسلاید "+(k+1)); b.innerHTML="<i></i>"; if(k===i) b.setAttribute("aria-current","true"); b.onclick=()=>cb(k); host.appendChild(b);} };
+
+/* programs list */
+const plist=document.getElementById("plist");
+EXAMS.forEach((e,i)=>{ const li=document.createElement("li");
+  li.dataset.iv=JSON.stringify({o:0,y:26,delay:i*90,t:190,f:26});
+  li.innerHTML=`<a href="#contact" class="rowlink"><span class="pn">0${i+1}</span><div class="pt"><h3>${e.n}</h3><p>${e.d}</p></div><span class="pc"><span class="rowarrow" style="display:grid">${arrowSvg}</span></span></a>`;
+  plist.appendChild(li); li._sp=new Sp(li,{o:0,y:26}); io.observe(li);
+  const ar=li.querySelector(".rowarrow"), sp=new Sp(ar,{o:.55});
+  li.addEventListener("pointerenter",()=>{ if(!isMobile()) sp.to({x:-8,o:1},{t:300,f:20}) });
+  li.addEventListener("pointerleave",()=>sp.to({x:0,o:.55},{t:300,f:20}));
+  li.querySelector("a").addEventListener("click",ev=>{ ev.preventDefault(); openModal(); });
+});
+
+/* stats */
+[["6","آزمون بین‌المللی"],["2020","سال تأسیس"],["4","مهارت اصلی زبان: شنیداری، خواندن، نوشتن، گفتاری"],["1","مرکز برای زبان و آزمون‌های تحصیلی"]].forEach(([v,l],i)=>{
+  const d=document.createElement("div"); d.dataset.iv=JSON.stringify({o:0,y:30,delay:i*110,t:180,f:24});
+  d.innerHTML=`<dt class="sr" style="position:absolute;left:-9999px">${l}</dt><dd class="val">${v}</dd><dd class="lab">${l}</dd>`;
+  document.getElementById("sg").appendChild(d); d._sp=new Sp(d,{o:0,y:30}); io.observe(d); });
+
+/* candidate gallery */
+EXAMS.forEach((e,i)=>{ const li=document.createElement("li"); li.dataset.iv=JSON.stringify({o:0,y:40,delay:(i%3)*120,t:180,f:26});
+  li.innerHTML=`<div class="hv" data-hv='{"y":-8,"t":300,"f":22}' style="height:100%"><div class="cc"><div class="crop" role="img" aria-label="داوطلب آزمون ${e.n}"><div class="ph t${e.tile}"></div></div><div class="meta"><b>${e.n}</b><span>${e.role}</span></div></div></div>`;
+  document.getElementById("cgrid").appendChild(li); li._sp=new Sp(li,{o:0,y:40}); io.observe(li);
+  const h=li.firstElementChild, sp=new Sp(h);
+  h.addEventListener("pointerenter",()=>{ if(!isMobile()) sp.to({y:-8},{t:300,f:22}) });
+  h.addEventListener("pointerleave",()=>sp.to({y:0},{t:300,f:22})); });
+
+/* footer contact (only what is configured) */
+const addr=document.getElementById("addr");
+if(CONFIG.email) addr.insertAdjacentHTML("afterbegin",`<a href="mailto:${CONFIG.email}">${CONFIG.email}</a>`);
+if(CONFIG.phone) addr.insertAdjacentHTML("afterbegin",`<a href="tel:${CONFIG.phone.replace(/\s/g,"")}" dir="ltr">${CONFIG.phone}</a>`);
+if(CONFIG.address) addr.insertAdjacentHTML("beforeend",`<span style="color:rgba(255,255,255,.55)">${CONFIG.address}</span>`);
+const soc=Object.entries(CONFIG.social).filter(([,u])=>u).map(([n,u])=>`<a href="${u}" target="_blank" rel="noopener">${n}</a>`).join("");
+document.getElementById("social").innerHTML=soc; document.getElementById("msocial").innerHTML=soc;
+
+/* ---------- hero collection slider ---------- */
+const stage=document.getElementById("slideStage"); let hi=0, hcur=null;
+const heroSlides=[{t:1,b:"IELTS",ti:"Academic & General",c:"مشاهده آزمون"},{t:2,b:"TOEFL",ti:"Reading · Listening",c:"مشاهده آزمون"},{t:3,b:"Duolingo",ti:"English Test",c:"مشاهده آزمون"}];
+function heroShow(i){
+  hi=i; dots(document.getElementById("heroDots"),3,hi,k=>{heroShow(k);reset()});
+  const s=heroSlides[i], el=document.createElement("div"); el.className="slide-card";
+  el.innerHTML=`<div class="crop"><div class="ph t${s.t}"></div></div><div><b>${s.b}</b><span>${s.ti}</span><u>${s.c} ←</u></div>`;
+  stage.appendChild(el); const sp=new Sp(el,{o:0,y:16,scale:.96}); sp.to({o:1,y:0,scale:1},{t:210,f:24});
+  if(hcur){ const old=hcur; old._sp.to({o:0,y:-16,scale:.96},{t:210,f:24}); setTimeout(()=>old.remove(),700); }
+  el._sp=sp; hcur=el;
+}
+let htimer; const reset=()=>{ clearInterval(htimer); htimer=setInterval(()=>heroShow((hi+1)%3),3800) };
+heroShow(0);
+
+/* ---------- trust carousel ---------- */
+let ti=0; const gws=[...document.querySelectorAll("#trust-title .gw")];
+const coach=document.getElementById("coachImg"), csp=new Sp(coach);
+function trustShow(i,first){
+  ti=(i+EXAMS.length)%EXAMS.length; const e=EXAMS[ti];
+  gws.forEach((g,k)=>{ g.innerHTML=`<span class="ln" style="--i:0;--d:700ms"><span>${HEADLINES[ti][k]}</span></span>`; g.firstChild.classList.remove("on");
+    void g.offsetWidth; setTimeout(()=>g.firstChild.classList.add("on"),first?60:20); });
+  document.getElementById("coachName").textContent=e.n; document.getElementById("coachRole").textContent=e.role;
+  csp.s.o=0; csp.paint(); coach.querySelector(".ph").className="ph t"+e.tile; csp.to({o:1},{t:260,f:26});
+  dots(document.getElementById("trustDots"),EXAMS.length,ti,k=>trustShow(k));
+}
+document.getElementById("prev").onclick=()=>trustShow(ti-1);
+document.getElementById("next").onclick=()=>trustShow(ti+1);
+trustShow(0,true);
+
+/* ---------- modal ---------- */
+const modal=document.getElementById("modal"), mbd=new Sp(document.getElementById("mbd"),{o:0}), mp=new Sp(document.getElementById("mpanel"),{o:0,y:28,scale:.96});
+const form=document.getElementById("form"), succ=document.getElementById("success");
+function openModal(){ closeMenu(); modal.classList.add("open"); modal.setAttribute("aria-hidden","false"); lock(true);
+  mbd.to({o:1},{t:240,f:30}); mp.to({o:1,y:0,scale:1},{t:240,f:26});
+  const t=document.getElementById("mt"); t.querySelectorAll(".ln").forEach(l=>l.classList.remove("on")); void t.offsetWidth; t.querySelectorAll(".ln").forEach(l=>l.classList.add("on"));
+  setTimeout(()=>document.getElementById("f1").focus(),120); }
+function closeModal(){ if(!modal.classList.contains("open")) return; modal.classList.remove("open"); modal.setAttribute("aria-hidden","true");
+  mbd.to({o:0},{t:240,f:30}); mp.to({o:0,y:28,scale:.96},{t:240,f:26}); lock(false);
+  setTimeout(()=>{ form.reset(); form.style.display="flex"; succ.style.display="none"; document.getElementById("submit").disabled=false; document.getElementById("submit").textContent="ثبت درخواست"; },350); }
+document.querySelectorAll("[data-open-modal]").forEach(b=>b.addEventListener("click",openModal));
+document.getElementById("mclose").onclick=closeModal; document.getElementById("mbd").onclick=closeModal; document.getElementById("done").onclick=closeModal;
+form.addEventListener("submit",e=>{ e.preventDefault(); const b=document.getElementById("submit"); b.disabled=true; b.textContent="در حال ارسال…";
+  const name=form.name.value.trim(), contact=form.contact.value.trim(), msg=form.msg.value.trim();
+  const text=`درخواست مشاوره\nنام: ${name}\nتماس: ${contact}\nپیام: ${msg}`;
+  setTimeout(()=>{ form.style.display="none"; succ.style.display="flex";
+    const first=name.split(" ")[0]||"دوست عزیز";
+    document.getElementById("thanks").textContent=`ممنون ${first}، همکاران ما برای هماهنگی مشاوره با شما تماس می‌گیرند.`;
+    if(CONFIG.whatsapp) window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`,"_blank");
+    else if(CONFIG.email) location.href=`mailto:${CONFIG.email}?subject=${encodeURIComponent("درخواست مشاوره")}&body=${encodeURIComponent(text)}`;
+  },700); });
+
+/* ---------- menu ---------- */
+const menu=document.getElementById("menu"), menubd=new Sp(document.getElementById("menubd"),{o:0}), menup=new Sp(document.getElementById("menup"),{o:0,y:-24});
+const menuLinks=[["آزمون‌ها","#programs"],["مسیر تحصیلی","#facilities"],["داوطلبان","#candidates"],["تماس","#contact"]];
+const mnav=document.getElementById("menunav"); const msps=[];
+menuLinks.forEach(([t,h])=>{ const a=document.createElement("a"); a.href=h; a.textContent=t; mnav.appendChild(a); msps.push(new Sp(a,{o:0,y:28}));
+  a.onclick=e=>{ e.preventDefault(); closeMenu(); setTimeout(()=>goTo(h),50); }; });
+function openMenu(){ menu.classList.add("open"); menu.setAttribute("aria-hidden","false"); lock(true);
+  menubd.to({o:1},{t:260,f:30}); menup.to({o:1,y:0},{t:220,f:28});
+  msps.forEach((s,i)=>setTimeout(()=>s.to({o:1,y:0},{t:200,f:26}),120+i*70)); }
+function closeMenu(){ if(!menu.classList.contains("open")) return; menu.classList.remove("open"); menu.setAttribute("aria-hidden","true");
+  menubd.to({o:0},{t:260,f:30}); menup.to({o:0,y:-24},{t:220,f:28}); msps.forEach(s=>s.to({o:0,y:28})); lock(false); }
+document.getElementById("burger").onclick=openMenu;
+document.getElementById("menuclose").onclick=closeMenu; document.getElementById("menubd").onclick=closeMenu;
+document.getElementById("menubook").onclick=()=>{ closeMenu(); setTimeout(openModal,60); };
+addEventListener("keydown",e=>{ if(e.key==="Escape"){ closeModal(); closeMenu(); } });
+
+/* smooth anchors */
+document.querySelectorAll('a[href^="#"]:not(#menunav a):not(.rowlink)').forEach(a=>a.addEventListener("click",e=>{ const h=a.getAttribute("href"); if(h.length>1){ e.preventDefault(); goTo(h);} }));
+
+/* ---------- loader ---------- */
+const MIN=reduce?200:1400, MAX=2600, EXIT=850;
+const loader=document.getElementById("loader"); lock(true);
+const lw=new Sp(document.getElementById("lw"),{o:0,y:16}); lw.to({o:1,y:0},{t:200,f:22});
+requestAnimationFrame(()=>document.getElementById("lt").classList.add("go"));
+let started=false;
+function start(){ if(started) return; started=true;
+  setTimeout(()=>{ readyRes(); lock(false); reset(); loader.classList.add("out"); if(reduce) loader.style.display="none"; setTimeout(()=>loader.remove(),EXIT); },MIN); }
+document.readyState==="complete" ? start() : addEventListener("load",start);
+setTimeout(start,MAX);
+</script>
 </body>
-
 </html>
-```
-
